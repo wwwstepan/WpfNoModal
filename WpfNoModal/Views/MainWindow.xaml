@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfNoModal.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfNoModal"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="180" Width="400">
+    <Window.DataContext>
+        <local:DataSrcVM/>
+    </Window.DataContext>
+    <Grid>
+        <StackPanel Margin="10" HorizontalAlignment="Left">
+            <Button Content="Dialog" Command="{Binding OpenDialogCommand}" Margin="5" Width="100"/>
+            <TextBlock Text="Data:" Margin="5"/>
+            <TextBlock Text="{Binding Data, Mode=TwoWay}" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
